@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ziweiforge"
+version = "1.0.0"
+description = "零依赖、真天文历算的紫微斗数排盘引擎（VSOP87 节气 + Meeus 朔望 + 自研农历编排）"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [{ name = "ZiweiForge contributors" }]
+keywords = [
+    "紫微斗数", "ziwei", "doushu", "astrology", "chinese-calendar",
+    "lunar-calendar", "vsop87", "astronomy", "ephemeris",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+ziweiforge = "ziweiforge.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gitstq/ZiweiForge"
+Repository = "https://github.com/gitstq/ZiweiForge"
+Issues = "https://github.com/gitstq/ZiweiForge/issues"
+
+[tool.setuptools]
+packages = [
+    "ziweiforge",
+    "ziweiforge.astro",
+    "ziweiforge.calendar",
+    "ziweiforge.chart",
+    "ziweiforge.render",
+]
+
+[tool.setuptools.package-data]
+ziweiforge = ["py.typed"]

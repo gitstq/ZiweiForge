@@ -1,0 +1,8 @@
+# ZiweiForge 运行时依赖：无。
+#
+# 本项目坚持零第三方依赖，仅使用 Python 标准库即可完成
+# 天文历算、农历编排与紫微斗数排盘。
+#
+# 开发（可选）：
+#   pytest       运行测试套件（也可直接用 python -m unittest discover -s tests）
+#   pyephem      仅用于 tests/test_astro.py 中的离线交叉校验，不参与构建
