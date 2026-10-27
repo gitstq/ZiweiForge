@@ -11,6 +11,12 @@
 
 import os
 
+import os
+import sys
+
+# 允许直接以 `python examples/xxx.py` 运行：把项目根目录加入模块搜索路径
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from ziweiforge import build_chart
 from ziweiforge.render.svg import render_svg
 

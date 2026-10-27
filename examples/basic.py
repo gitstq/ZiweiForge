@@ -7,6 +7,12 @@
     python examples/basic.py
 """
 
+import os
+import sys
+
+# 允许直接以 `python examples/xxx.py` 运行：把项目根目录加入模块搜索路径
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from ziweiforge import build_chart, render_stars, render_text
 from ziweiforge.calendar import DI_ZHI
 
